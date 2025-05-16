@@ -2,7 +2,7 @@
 
 静的サイトに特化したフロントエンドフレームワーク、[Astro](https://astro.build)の使い方を実際に手を動かしながら学べるハンズオンです。
 
-<a href="/docs/ch0/0_init.md" align="center">ハンズオンをはじめる</a>
+<p align="center"><a href="/docs/ch0/0_init.md">ハンズオンをはじめる</a></p>
 
 ## チャプター
 
