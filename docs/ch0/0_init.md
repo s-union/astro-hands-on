@@ -19,8 +19,8 @@ Astroハンズオンへようこそ！
 - [プロジェクトを導入しよう](/docs/ch0/2_clone_and_push.md)
   - プロジェクトをローカルにダウンロードしましょう。
   - GitHubにPushしてみましょう。
-- Astroに使われている技術を知ろう
-- JavaScript/TypeScriptに慣れよう
+- [Astroに使われている技術を知ろう](/docs/ch0/3_astro_tech.md)
+- [JavaScript/TypeScriptに慣れよう](/docs/ch0/4_javascript.md)
   - 簡単なコードを実行して、JavaScriptの書き方を知っておきましょう。
 
 それでは、ハンズオンを始めましょう！
