@@ -53,8 +53,8 @@ gitとGitHub間の通信を安全なものにするために導入する必要�
 完了したら、gitの設定を変更します。
 
 ```bash
-$ git config --global user.name "YOUR_NAME_HERE"
-$ git config --global user.email "YOUR_EMAIL_HERE"
+$ git config --global user.name "<YOUR_NAME_HERE>"
+$ git config --global user.email "<YOUR_EMAIL_HERE>"
 ```
 
 `YOUR_NAME_HERE` と `YOUR_EMAIL_HERE` の部分は自分の名前とメールアドレスを入力しましょう。
