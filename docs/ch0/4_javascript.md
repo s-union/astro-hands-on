@@ -253,7 +253,7 @@ const addNumber = (a, b) => {
 
 TypeScriptは、2012年にMicrosoftが公開した、JavaScript本来の仕様に型付けなどの機能を追加した言語です。
 
-実際に使ってみましょう。 `index.js` を `index.ts` にリネームし、以下のように書き換えてください。
+まずは実際に使ってみましょうt。 `index.js` を `index.ts` にリネームし、以下のように書き換えてください。
 
 ```ts
 const addNumber = (a: number, b: number) => {
@@ -265,7 +265,9 @@ console.log(addNumber(1, 2)); // 3
 
 先ほどのコードから型の定義部分が増えていますね。
 
-コードを実行するにはまず `.ts` ファイルを `.js` ファイルに変換する必要があります。 `tsc` というコマンドが型の検査と `.js` への変換をやってくれます。
+Node.jsはTypeScriptを直接実行できないので、まず `.ts` ファイルを `.js` ファイルに変換する必要があります[^2]。 `tsc` というコマンドが型の検査と `.js` への変換をやってくれます。
+
+[^2]: 2025年5月現在、Node.js環境におけるtsファイルの実行は実装されています](https://nodejs.org/en/blog/release/v23.6.0)が、安定版(LTS)ではExperimentalです。tsファイルの実行には[ts-node](https://www.npmjs.com/package/ts-node)や[tsx](https://tsx.is/)のような実行ライブラリ、または[Bun](https://bun.sh/)や[Deno](https://deno.com/)のようなts対応のランタイムを利用するといいでしょう。
 
 ```bash
 $ pnpm tsc index.ts
@@ -274,10 +276,12 @@ $ pnpm tsc index.ts
 変換された `index.js` を見てみましょう。
 
 ```js
-var addNumber = function (a, b) {
+const addNumber = (a, b) => {
     return a + b;
 };
 console.log(addNumber(1, 2)); // 3
 ```
 
-書き方が変わっていますが型定義部分が無くなっているのが分かりますね。
+型定義部分が無くなっているのが分かりますね。これで実行できます。
+
+では、先ほどのように文字列を挿入したらどうなるでしょうか。
