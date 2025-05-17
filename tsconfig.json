@@ -1,8 +1,5 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "compilerOptions": {
-    "target": "ES2022"
-  },
   "include": [
     ".astro/types.d.ts",
     "**/*"
