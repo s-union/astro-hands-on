@@ -71,4 +71,183 @@ JavaScriptには2つの変数があります。
 
 ### 型
 
-あらゆる変数や
+あらゆる変数やオブジェクト、クラスには型がついています。JavaScriptは動的に型を判断しています。
+
+#### 型の一覧
+
+| 型名      | 説明                               | 具体例                |
+| --------- | ---------------------------------- | --------------------- |
+| number    | 数値を表します。                   | `123`                 |
+| string    | 文字列を表します。                 | `'something'`         |
+| boolean   | 真偽のどちらかを表します           | `true` または `false` |
+| null      | 値がないことを表します。           | `null`                |
+| undefined | 値が未定義のことを表します。       | `undefined`           |
+| array     | 値の配列を表します。               | `[1, 2, 3]`           |
+| object    | 名前つきのオブジェクトを表します。 | `{name: 'John'}`      |
+
+## 関数
+
+`index.js` を以下のように編集します。
+
+```js
+function addNumber(a, b) {
+  return a + b;
+}
+
+const subtractNumber = (a, b) => {
+  return a - b;
+};
+
+const multiplyNumber = function (a, b) {
+  return a * b;
+}; // 通常の関数
+
+console.log(addNumber(5, 3)); // Output: 8
+console.log(subtractNumber(5, 3)); // Output: 2
+console.log(multiplyNumber(5, 3)); // Output: 15
+
+```
+
+実行すると、8と2が出力されるはずです。
+
+JavaScriptには関数定義の方法が2つあります。通常の関数宣言とアロー関数です。
+
+アロー関数は比較的近年できた方法です。短く書けるので推奨している人も多いです。
+
+特にmapメソッドなどは圧倒的に楽になります。
+
+```js
+const numArray = [1, 2, 3]
+const doubled = numArray.map((num) => num * 2) // アロー関数は一行ならこれだけでOK
+
+console.log(doubled) // [2, 4, 6]
+```
+
+## import/export構文
+
+JavaScriptでは、特定の関数や値をエクスポートして、別のファイルから読み込ませる、ということもできます。
+
+まず、 `lib.js` というファイルを作り、以下のように記述します。
+
+```js
+export const addNumber = (a, b) => {
+  return a + b;
+};
+
+const magicNumber = 42;
+
+export default magicNumber;
+```
+
+次に、 `index.js` に以下のように書きましょう。
+
+```js
+import { addNumber } from './lib';
+import magicNumber from './lib'
+
+console.log(addNumber(1, 2)); // 3
+console.log(magicNumber); // 42
+```
+
+`export` した関数や変数を `import` を介して取得できていますね。
+
+### named exportとdefault export
+
+サンプルコードでは2つのexportの方式がありました。
+
+```js
+export const addNumber = (a, b) => {
+  return a + b;
+};
+```
+
+のようにそのままexportしているものと、
+
+```js
+const addNumber = (a, b) => {
+  return a + b;
+};
+export default addNumber
+```
+
+のように `default` というワードが入っているものです。
+
+これはそれぞれ **named export** 、 **default export** と呼ばれ、微妙に制約が異なります。
+
+#### named export
+
+named export(名前付きエクスポート)は1つのファイル内でいくつも使うことができます。ただし、名前をインポート側で変更できません。
+
+```js
+// lib.js エクスポート側
+export const addNumber = (a, b) => {
+  return a + b;
+};
+
+export const subtractNumber = (a, b) => {
+  return a - b;
+};
+```
+
+```js
+// index.js インポート側
+import { addNumber, substractNumber } from './lib' // 名前は固定される
+
+console.log(addNumber(5, 3)); // Output: 8
+console.log(subtractNumber(5, 3)); // Output: 2
+```
+
+### default import
+
+`export default` という構文を用います。1ファイルあたり1つしか使うことができませんが、インポート側で名前を変更することができます。
+
+```js
+// lib.js エクスポート側
+const addNumber = (a, b) => {
+  return a + b;
+};
+
+export default addNumber
+```
+
+```js
+// index.js インポート側
+import yourOwnNamedFunction from './lib' // 名前は固定されず、好きな名前で使える
+
+console.log(yourOwnNamedFunction(5, 3)); // Output: 8
+```
+
+## TypeScriptへ
+
+さて、ここまででJavaScriptの基礎構文を勉強してもらいましたが、ここからはTypeScriptについても見ていきましょう。
+
+改めて、 `index.js` に以下のコードを書いてください。
+
+```js
+const addNumber = (a, b) => {
+  return a + b;
+};
+
+console.log(addNumber(1, 2)); // 3
+```
+
+このコードは `addNumber` に2つの数字を渡すことがで、その足し算をする関数ですが、実はこれ、**文字列を入れることができてしまいます。**
+
+```diff
+const addNumber = (a, b) => {
+  return a + b;
+};
+
+- console.log(addNumber(1, 2)); // 3
++ console.log(addNumber(1, '2')); // 12
+```
+
+これはJavaScriptの仕様で、文字列型が優先されるのです。これは意図していない動作ですよね。
+
+では、これを防ぐにはどうしたらいいでしょうか。ここで登場するのが **TypeScript** です。
+
+### TypeScriptの初歩
+
+TypeScriptは、2012年にMicrosoftが公開した、JavaScript本来の仕様に型付けなどの機能を追加した言語です。
+
+実際に使ってみましょう。 `index.js` を `index.ts` にリネームし、以下のように書き換えてください。
