@@ -265,9 +265,9 @@ console.log(addNumber(1, 2)); // 3
 
 先ほどのコードから型の定義部分が増えていますね。
 
-Node.jsはTypeScriptを直接実行できないので、まず `.ts` ファイルを `.js` ファイルに変換する必要があります[^2]。 `tsc` というコマンドが型の検査と `.js` への変換をやってくれます。
+Node.jsはTypeScriptを直接実行できないので、まず `.ts` ファイルを `.js` ファイルに変換する必要があります[^1]。 `tsc` というコマンドが型の検査と `.js` への変換をやってくれます。
 
-[^2]: 2025年5月現在、Node.js環境におけるtsファイルの実行は実装されています](https://nodejs.org/en/blog/release/v23.6.0)が、安定版(LTS)ではExperimentalです。tsファイルの実行には[ts-node](https://www.npmjs.com/package/ts-node)や[tsx](https://tsx.is/)のような実行ライブラリ、または[Bun](https://bun.sh/)や[Deno](https://deno.com/)のようなts対応のランタイムを利用するといいでしょう。
+[^1]: 2025年5月現在、Node.js環境における[tsファイルの実行は実装されています](https://nodejs.org/en/blog/release/v23.6.0)が、安定版(LTS)ではExperimentalです。tsファイルの実行には[ts-node](https://www.npmjs.com/package/ts-node)や[tsx](https://tsx.is/)のような実行ライブラリ、または[Bun](https://bun.sh/)や[Deno](https://deno.com/)のようなts対応のランタイムを利用するといいでしょう。
 
 ```bash
 $ pnpm tsc index.ts
