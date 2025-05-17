@@ -200,7 +200,7 @@ console.log(addNumber(5, 3)); // Output: 8
 console.log(subtractNumber(5, 3)); // Output: 2
 ```
 
-### default import
+#### default import
 
 `export default` という構文を用います。1ファイルあたり1つしか使うことができませんが、インポート側で名前を変更することができます。
 
@@ -234,7 +234,7 @@ const addNumber = (a, b) => {
 console.log(addNumber(1, 2)); // 3
 ```
 
-このコードは `addNumber` に2つの数字を渡すことがで、その足し算をする関数ですが、実はこれ、**文字列を入れることができてしまいます。**
+このコードは `addNumber` に2つの数字を渡すことで、その足し算をする関数ですが、実はこれ、**文字列を入れることができてしまいます。**
 
 ```diff
 const addNumber = (a, b) => {
@@ -253,7 +253,7 @@ const addNumber = (a, b) => {
 
 TypeScriptは、2012年にMicrosoftが公開した、JavaScript本来の仕様に型付けなどの機能を追加した言語です。
 
-まずは実際に使ってみましょうt。 `index.js` を `index.ts` にリネームし、以下のように書き換えてください。
+まずは実際に使ってみましょう。 `index.js` を `index.ts` にリネームし、以下のように書き換えてください。
 
 ```ts
 const addNumber = (a: number, b: number) => {
