@@ -1,4 +1,4 @@
-const addNumber = (a, b) => {
+const addNumber = (a: number, b: number) => {
   return a + b;
 };
 

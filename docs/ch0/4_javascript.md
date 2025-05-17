@@ -69,6 +69,9 @@ JavaScriptには2つの変数があります。
   - letは変更可能です。
   - `variable = ...` という形で代入する値を変えられます。
 
+> [!NOTE]
+> 古いJavaScriptの記事だと `var variable = ...` のように `var` で定義しているものがありますが現在は非推奨です。
+
 ### 型
 
 あらゆる変数やオブジェクト、クラスには型がついています。JavaScriptは動的に型を判断しています。
@@ -251,3 +254,30 @@ const addNumber = (a, b) => {
 TypeScriptは、2012年にMicrosoftが公開した、JavaScript本来の仕様に型付けなどの機能を追加した言語です。
 
 実際に使ってみましょう。 `index.js` を `index.ts` にリネームし、以下のように書き換えてください。
+
+```ts
+const addNumber = (a: number, b: number) => {
+  return a + b;
+};
+
+console.log(addNumber(1, 2)); // 3
+```
+
+先ほどのコードから型の定義部分が増えていますね。
+
+コードを実行するにはまず `.ts` ファイルを `.js` ファイルに変換する必要があります。 `tsc` というコマンドが型の検査と `.js` への変換をやってくれます。
+
+```bash
+$ pnpm tsc index.ts
+```
+
+変換された `index.js` を見てみましょう。
+
+```js
+var addNumber = function (a, b) {
+    return a + b;
+};
+console.log(addNumber(1, 2)); // 3
+```
+
+書き方が変わっていますが型定義部分が無くなっているのが分かりますね。
