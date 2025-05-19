@@ -354,3 +354,5 @@ interface PostList {
 これでこのチャプターは終了です！お疲れ様でした！
 
 JavaScriptの変数・型・関数、そしてTypeScriptの型チェックはこれからのAstroでのプログラミングでも出てきますのできちんと覚えておきましょう！
+
+[次のページへ](/docs/ch1/1_start_astro.md)
