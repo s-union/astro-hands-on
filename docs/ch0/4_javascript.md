@@ -61,6 +61,8 @@ console.log(object.name);
 
 ### 変数の定義
 
+変数とはデータを格納しておく箱のようなものです。
+
 JavaScriptには2つの変数があります。
 
 - `const variable = ...`
@@ -74,7 +76,7 @@ JavaScriptには2つの変数があります。
 
 ### 型
 
-あらゆる変数やオブジェクト、クラスには型がついています。JavaScriptは動的に型を判断しています。
+あらゆるデータには **型** というどのようなデータを扱うかの指定がついています。JavaScriptは動的に型を判断しています。
 
 #### 型の一覧
 
@@ -285,3 +287,70 @@ console.log(addNumber(1, 2)); // 3
 型定義部分が無くなっているのが分かりますね。これで実行できます。
 
 では、先ほどのように文字列を挿入したらどうなるでしょうか。
+
+```ts
+const addNumber = (a: number, b: number) => {
+  return a + b;
+};
+
+console.log(addNumber(1, '2')); // 型エラーになる
+```
+
+実行結果
+
+```
+index.ts:5:26 - error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+
+5 console.log(addNumber(1, '2')); // error
+                           ~~~
+
+
+Found 1 error in index.ts:5
+```
+
+きちんとエラーが出てくれました。これでバグを未然に防ぐことができましたね。
+
+このように、プログラムが実行される際に、データ型に矛盾が生じないことを保証することを **型安全性** と呼びます。
+
+TypeScriptは **JavaScriptの型安全を高めた言語** といえるでしょう。
+
+### 型定義の `type` と `interface`
+
+より複雑な型を表現するために、TypeScriptでは `type` と `interface` が用意されています。
+
+```ts
+type Post = {
+  id: number;
+  title: string;
+  tag: string[];
+  content: string;
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+interface PostList {
+  posts: Post[];
+  total: number;
+  page: number;
+}
+```
+
+コードのように、型定義内で他の型定義を利用することもできます。
+
+## TypeScriptのメリット
+
+型安全性のメリットはただエラーを事前に検知できるだけではありません。
+
+- 型定義によってコードの可読性が向上する
+- VSCodeなどのIDEの補完が効く
+- AIコーディングツールの支えになる
+
+特にIDEによる補完の存在は大きいです。これだけでコーディングスピードが桁違いに上がります。
+
+![](/docs/ch0/img/ts-ide-server.png)
+
+## おしまい！
+
+これでこのチャプターは終了です！お疲れ様でした！
+
+JavaScriptの変数・型・関数、そしてTypeScriptの型チェックはこれからのAstroでのプログラミングでも出てきますのできちんと覚えておきましょう！
