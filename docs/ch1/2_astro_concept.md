@@ -4,21 +4,63 @@ Astroは他のフロントエンドフレームワーク(具体的にはReactや
 
 ## .astroファイルの見方
 
+```astro
+---
+// ここにJavaScriptのコード部が入る
+const msg = 'Hello World'
+---
+
+<!-- ここにHTMLのコード部が入る -->
+<div>{ msg }</div> <!-- <div>Hello World</div> -->
+
+<style>
+/* ここにCSSのコード部が入る */
+div {
+  font-size: 2rem
+}
+</style>
+```
+
+AstroはJavaScript(TypeScript)、HTML、CSSを1つのファイル上で記述します。
+
 ## Astroのディレクトリ構造
 
 Astroは以下のような構造になっています。
 
-- pulic: faviconなど、コピーするだけのファイルはここに入れます。
-- src: Astroのファイル類はこのsrc以下に入れる、ということになっています。
-  - components: コンポーネント(後述)を入れます。
-  - images: 画像ファイルをここに格納します。
-  - pages: どのページにどのファイルが表示されるかをディレクトリ構造で表します。
-  - layouts: レイアウト(後述)を入れます。
-  - styles: CSSファイルなどをここに格納します。
-- astro.config.{mjs|ts}: Astro本体の設定をします。
+![](/docs/ch1/img/astro_directory.png)
 
-### src/pagesについて
+- `pulic/`: faviconなど、コピーするだけのファイルはここに入れます。
+- `src/`: Astroのファイル類はこのsrc以下に入れる、ということになっています。
+  - `components/` : コンポーネント(後述)を入れます。
+  - `images/`: 画像ファイルをここに格納します。
+  - `layouts`: レイアウト(後述)を入れます。
+  - `pages/`: ルーティングに関与します(後述)。
+  - `styles`: CSSファイルなどをここに格納します。
+- `astro.config.{mjs|ts}`: Astro本体の設定をします。
 
-src/pages 以下のastroファイルはURLの作成に関与します。
+### `src/pages/` について
 
-例を見てみましょう。
+`src/pages/` 以下の.astroファイルは **ルーティング** と呼ばれる、URLのパスと処理の紐づけ作業に関与します。
+
+例を見てみましょう。こんなファイル構造があるとします。
+
+```
+/
+└─ src
+   └─ pages
+      ├─ posts
+      │     ├─ special.astro
+      │     └─ [id].astro
+      ├─ about.astro
+      └─ index.astro
+```
+
+この場合、Astroは以下のルーティングを用意します。
+
+- `src/pages/index.astro` -> `/`
+- `src/pages/about.astro` -> `/about`
+- `src/pages/posts/special.astro` -> `/posts/special`
+- `src/pages/posts/[id].astro` -> `/posts/*`
+  - `/posts/` 以下の全て
+
+このようなファイルの構造からルーティングを決定することを **ファイルベースルーティング** (File-based Routing)といいます。
