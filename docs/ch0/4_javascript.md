@@ -147,7 +147,7 @@ export default magicNumber;
 次に、 `index.js` に以下のように書きましょう。
 
 ```js
-import { addNumber } from './lib';
+import { addNumber } from './lib.js';
 import magicNumber from './lib'
 
 console.log(addNumber(1, 2)); // 3
