@@ -26,7 +26,7 @@ $ pnpm run dev
 
 今見ているページは `src/pages/index.astro` というファイルを参照しています。
 
-試しに変更してみましょう。 **開発サーバーを停止せずに** `<h1>` タグをこのように書き換えます。([コミットログ](https://github.com/s-union/astro-hands-on/commit/b6eca590fbfff23b90444b5806eb6d6af4d564b0))
+試しに変更してみましょう。 **開発サーバーを停止せずに** `<h1>` タグをこのように書き換えます。
 
 ```diff
 ---
@@ -47,4 +47,8 @@ $ pnpm run dev
 </html>
 ```
 
+コミットログ: [b6eca59](https://github.com/s-union/astro-hands-on/commit/b6eca590fbfff23b90444b5806eb6d6af4d564b0)
+
 保存すると開発サーバーが自動で更新されていることが分かるはずです！このように、コードと開発サーバーを行き来しながらコードを書いていくことになります。
+
+[次のページへ](/docs/ch1/2_astro_concept.md)

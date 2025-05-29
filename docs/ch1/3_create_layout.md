@@ -163,3 +163,59 @@ import '../styles/global.css'
 ここまでのコミットログ: [ac7c995](https://github.com/s-union/astro-hands-on/commit/ac7c995e629858189fc5a80f1e56b4eaa3dd30b1)
 
 ## フッターを作ろう
+
+続いてフッターも実装しましょう。今回は事前に読み込んだCSSでフッターが一番下になるように調整されているのでそのまま書いていきます。
+
+```astro
+---
+// src/components/footer.astro
+---
+
+<footer>
+  <span class="footer__text">© 2025 Your Name</span>
+</footer>
+
+<style>
+footer {
+  width: 100%;
+  height: 24px;
+  background-color: black;
+  color: white;
+  text-align: center;
+
+  .footer__text {
+    line-height: 24px;
+    font-size: 14px;
+  }
+}
+</style>
+```
+
+忘れずに `src/layouts/default.astro` のファイルも更新しておきましょう。
+
+```diff
+---
+import '../styles/global.css'
+
++ import Footer from '../components/footer.astro'
+import Header from '../components/header.astro'
+---
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<Header />
+		<slot />
++ 		<Footer />
+	</body>
+</html>
+```
+
+![](/docs/ch1/img/footer.png)
+
+ここまでできたらレイアウトは完成です！
