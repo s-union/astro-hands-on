@@ -131,7 +131,7 @@ header {
 </style>
 ```
 
-既にCSSについては学習しているかと思いますので詳細は説明しませんが、 `.header__title` と `nav` が両脇に配置するようになっているはずです。
+既にCSSについては学習しているかと思いますので詳細は説明しませんが、flexboxを活用して両脇に配置していますね。
 
 これを `src/layouts/default.astro` で読み込みましょう。
 
@@ -164,7 +164,7 @@ import '../styles/global.css'
 
 ## フッターを作ろう
 
-続いてフッターも実装しましょう。今回は事前に読み込んだCSSでフッターが一番下になるように調整されているのでそのまま書いていきます。
+続いてフッターも簡易的にですが実装しましょう。今回は事前に読み込んだCSSでフッターが一番下になるように調整されているのでそのまま書いていきます。
 
 ```astro
 ---
@@ -216,6 +216,10 @@ import Header from '../components/header.astro'
 </html>
 ```
 
+コミットログ: [4528d4b](https://github.com/s-union/astro-hands-on/commit/4528d4b99ac1c2518fb505451a3beda9c08e1ea1)
+
 ![](/docs/ch1/img/footer.png)
 
 ここまでできたらレイアウトは完成です！
+
+[次のページへ](/docs/ch1/4_create_pages.md)

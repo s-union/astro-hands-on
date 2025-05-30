@@ -15,6 +15,7 @@
 - Chapter 1: Astroをはじめよう
   - Astroを触ってみよう
   - Astroの考え方を知ろう
+  - レイアウトを作ろう
   - ページを作ってみよう
 - Chapter 3: ブログ投稿を作ろう
   - AstroとMarkdown
