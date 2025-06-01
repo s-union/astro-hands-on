@@ -32,9 +32,9 @@ const blog = defineCollection({
 export const collections = { blog };
 ```
 
-Astroには `defineCollection` という関数を定義し、それをエクスポートすることで、外部から型安全にコンテンツを参照する仕組みがあります。
-
 ### 解説
+
+Astroには `defineCollection` という関数を定義し、それをエクスポートすることで、外部から型安全にコンテンツを参照する仕組みがあります。
 
 <details>
 <summary>より詳細な解説(TypeScriptに慣れている人向け)</summary>
@@ -102,13 +102,13 @@ const { Content } = await render(entry);
 </Default>
 ```
 
-Astroは `getStaticPaths()` という関数を使うことで、動的にルーティングを設定することができます。こうすることで、Markdownファイルを増やすだけで、自動でURLが設定されるようになり、管理の手間が省けるというわけです。
-
 これを記述した後、 `http://localhost:4321/blog/<ファイル名>` (例えば、 `hello.md` なら `http://localhost:4321/blog/hello` ) にアクセスすると、記事が描画されているはずです！
 
 ![](/docs/ch2/img/blog_1.png)
 
 ### 解説
+
+Astroは `getStaticPaths()` という関数を使うことで、動的にルーティングを設定することができます。こうすることで、Markdownファイルを増やすだけで、自動でURLが設定されるようになり、管理の手間が省けるというわけです。
 
 <details>
 <summary>より詳細な解説(TypeScriptに慣れている人向け)</summary>
