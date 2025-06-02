@@ -17,8 +17,8 @@ import { glob } from 'astro/loaders';
 import { defineCollection, z } from 'astro:content';
 
 const blog = defineCollection({
-  // 'src/contents/blog'内のMarkdownファイルを読み込む
-  loader: glob({ base: './src/contents/blog', pattern: '**/*.md' }),
+  // 'src/content/blog'内のMarkdownファイルを読み込む
+  loader: glob({ base: './src/content/blog', pattern: '**/*.md' }),
 
   // Markdownのスキーマを定義
   schema: z.object({
@@ -43,7 +43,7 @@ Astroには `defineCollection` という関数を定義し、それをエクス�
 
 #### loader
 
-コンテンツを読み込む方式を定義します。今回の場合、 `glob` という関数を用いて `src/contents/blog` 以下の拡張子 `.md` のファイルを読み込むように指定しています。
+コンテンツを読み込む方式を定義します。今回の場合、 `glob` という関数を用いて `src/content/blog` 以下の拡張子 `.md` のファイルを読み込むように指定しています。
 
 #### schema
 
@@ -154,4 +154,4 @@ const entry: {
 
 </details>
 
-コミットログ: [65d7757](https://github.com/s-union/astro-hands-on/commit/65d7757d00137748df9a98119d04b977b073ccf6)
+コミットログ: [f135d79](https://github.com/s-union/astro-hands-on/commit/f135d797393c9724800d9cd80d096ba5dfafaa4c)

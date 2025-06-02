@@ -4,12 +4,12 @@
 
 ## Markdownファイルを作ろう
 
-ブログ投稿のようなコンテンツをファイルのどこに置くかは特に決まっていませんが、慣例的に、 `src/contents/` 以下に置くことが多いように思えます。今回は `src/contents/blog` にファイルを置くことにしましょう。
+ブログ投稿のようなコンテンツをファイルのどこに置くかは特に決まっていませんが、慣例的に、 `src/content/` 以下に置くことが多いように思えます。今回は `src/content/blog` にファイルを置くことにしましょう。
 
 ```
 .
 ├── src
-│   ├── contents
+│   ├── content
 │   │   └── blog
 │   │       ├── first.md
 │   │       ├── second.md
@@ -21,7 +21,7 @@
 こんな感じに、記事を書いてみてください。
 
 ```markdown
-// src/contents/blog/hello.md
+// src/content/blog/hello.md
 ---
 title: 'はじめまして！'
 cover: 'image1.jpg'
@@ -47,6 +47,6 @@ updated: '2025/06/01'
 
 同じようなMarkdownのブログ投稿を4つ作ってください！
 
-コミットログ: [7d4f503](https://github.com/s-union/astro-hands-on/commit/7d4f5036e96dcbaa36846d668c055e08bd061258)
+コミットログ: [c01c81d](https://github.com/s-union/astro-hands-on/commit/c01c81d7e874e7e57be772d1dc31827a8f15311f)
 
 [次のページへ](/docs/ch2/3_content_collection.md)
