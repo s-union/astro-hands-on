@@ -257,7 +257,7 @@ const names = ['Tom', 'John', 'Mary']
 
 のように変換されるわけです。
 
-<details>
+</details>
 
 ## 完成！！
 
