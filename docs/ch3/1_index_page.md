@@ -27,7 +27,7 @@ const { entry, image } = Astro.props;
 ---
 
 <div class="blog-card">
-	<a href={`/blog/${entry.id}`} class="blog-card__link">
+	<a href={`/astro-hands-on/blog/${entry.id}`} class="blog-card__link">
 		<div class="blog-card__image">
 			{image && (
 				<Image
@@ -117,12 +117,6 @@ const { entry, image } = Astro.props;
 .blog-card__updated {
 	font-style: italic;
 	color: #888;
-}
-
-@media (min-width: 768px) {
-	.blog-card__image {
-		height: 200px;
-	}
 }
 </style>
 ```
@@ -264,3 +258,9 @@ const names = ['Tom', 'John', 'Mary']
 のように変換されるわけです。
 
 <details>
+
+## 完成！！
+
+![](/docs/ch3/img/index_page.png)
+
+長らくのコーディングお疲れ様でした！これでAstro部分は全て完成です！！
