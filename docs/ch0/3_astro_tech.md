@@ -18,7 +18,7 @@ JavaScriptに静的な型をつけられるようにした言語です。
 
 ## JSX
 
-HTML(厳密には違う)をJavaScriptのコード内に書けるようにした言語です。元々はReactというWebフレームワークのために作られました。
+HTMLのようにタグを書きながら、JavaScriptのロジックも一緒に書ける記法です。元々はReactというWebフレームワークのために作られました。
 
 ```jsx
 function Hello(name) {
@@ -29,6 +29,6 @@ function Hello(name) {
 }
 ```
 
-HTMLをJavaScriptのロジックで記述できるため、複雑なUIも比較的楽に書けるメリットがあります。
+HTMLの書き方とJavaScriptの変数や関数を組み合わせることで、複雑なUIをもったWebページを作りやすくなります。
 
 [次のページへ](/docs/ch0/4_javascript.md)

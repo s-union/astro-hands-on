@@ -8,7 +8,7 @@
 
 Markdownとは、文章を記述するための軽量なマークアップ言語です。シンプルな記述で太字や斜線、見出しなどの装飾を行うことができます。MarkdownはHTMLに変換することを念頭に設計されましたが、その手軽さと汎用性の高さからWordやPowerpointなどの別のファイル形式にも変換できるようなツールも開発されています。
 
-**このハンズオンもMarkdownで記述されています。** PreviewをCodeにするとそれが分かると思います。
+**このハンズオンもMarkdownで記述されています。** PreviewをCodeにするとそれが確認できます。
 
 ## Markdownの書き方
 
@@ -20,7 +20,7 @@ Markdownはただのプレーンテキストですので、メモ帳などでも
 
 ## Markdownの記法
 
-Markdownには様々な仕様(方言)が存在していますが、[GitHub Flavored Markdown](https://github.github.com/gfm/)という仕様がよく用いられています。今回のハンズオンでもこの仕様に準拠した形で説明したいと思います。
+Markdownには様々な書き方の仕様（方言）が存在していますが、[GitHub Flavored Markdown](https://github.github.com/gfm/)というGitHubが定めた標準的な仕様がよく用いられています。今回のハンズオンでもこの仕様に沿って説明したいと思います。
 
 ### 見出し
 
@@ -146,7 +146,7 @@ Markdownには様々な仕様(方言)が存在していますが、[GitHub Flavo
 
 これらのMarkdownはあくまでも一例です！この他にも、例えば[TeX互換の数式を扱えたり](https://docs.github.com/ja/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)、[ハイライト付きのコードブロックを使えたり](https://docs.github.com/ja/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks)します。
 
-参考資料をベースに調べてみるといいでしょう。
+参考資料をベースに調べてみることをお勧めします。
 
 ## 参考
 

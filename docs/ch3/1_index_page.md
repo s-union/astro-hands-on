@@ -144,7 +144,7 @@ import cover from '../images/cover.jpg';
 // ブログ記事をすべて取得
 const blogEntries = await getCollection('blog');
 
-// 画像のインポート（動的に取得）
+// 画像のインポート（画像ファイルを一括で読み込む）
 interface ImageModule {
   default: ImageMetadata;
 }
@@ -221,6 +221,9 @@ const imageModules = import.meta.glob<ImageModule>('../images/*.{png,jpg,jpeg,gi
 }
 </style>
 ```
+
+> [!NOTE]
+> `eager: true`は画像ファイルを「すぐに読み込む」設定です。通常は必要な時だけ読み込みますが、この設定により、最初からすべての画像を読み込むようになります。
 
 コミットログ: [7c962eb](https://github.com/s-union/astro-hands-on/commit/7c962eb548e88eec61a37c0b951d050943dbe9b2)
 

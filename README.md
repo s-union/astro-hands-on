@@ -17,11 +17,11 @@
   - Astroの考え方を知ろう
   - レイアウトを作ろう
   - ページを作ってみよう
-- Chapter 3: ブログ投稿を作ろう
+- Chapter 2: ブログ投稿を作ろう
   - AstroとMarkdown
   - Markdownでブログ記事を書こう
   - コンテンツ管理をしてみよう
-- Chapter 4: Astroをデプロイしてみよう
+- Chapter 3: Astroをデプロイしてみよう
   - トップページを完成させよう
   - GitHub Pagesにデプロイしよう
 

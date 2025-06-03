@@ -57,7 +57,7 @@ console.log(object);
 console.log(object.name);
 ```
 
-これを実行してみると色々出力されますよね。順番に見ていきましょう。
+これを実行してみると様々な値が出力されます。順番に確認していきましょう。
 
 ### 変数の定義
 
@@ -67,7 +67,7 @@ JavaScriptには2つの変数があります。
 
 - `const variable = ...`
   - constは変更不可能です。
-- `let varivable = ...`
+- `let variable = ...`
   - letは変更可能です。
   - `variable = ...` という形で代入する値を変えられます。
 
@@ -113,13 +113,13 @@ console.log(multiplyNumber(5, 3)); // Output: 15
 
 ```
 
-実行すると、8と2が出力されるはずです。
+実行すると、8、2、15が出力されます。
 
 JavaScriptには関数定義の方法が2つあります。通常の関数宣言とアロー関数です。
 
-アロー関数は比較的近年できた方法です。短く書けるので推奨している人も多いです。
+アロー関数は比較的近年できた記法です。短く書けるので推奨している人も多いです。
 
-特にmapメソッドなどは圧倒的に楽になります。
+特にmapメソッド（配列の各要素を変換する機能）などでは、コードがとても短くなり便利です。
 
 ```js
 const numArray = [1, 2, 3]
@@ -196,13 +196,13 @@ export const subtractNumber = (a, b) => {
 
 ```js
 // index.js インポート側
-import { addNumber, substractNumber } from './lib' // 名前は固定される
+import { addNumber, subtractNumber } from './lib.js' // 名前は固定される
 
 console.log(addNumber(5, 3)); // Output: 8
 console.log(subtractNumber(5, 3)); // Output: 2
 ```
 
-#### default import
+#### default export
 
 `export default` という構文を用います。1ファイルあたり1つしか使うことができませんが、インポート側で名前を変更することができます。
 
@@ -247,9 +247,9 @@ const addNumber = (a, b) => {
 + console.log(addNumber(1, '2')); // 12
 ```
 
-これはJavaScriptの仕様で、文字列型が優先されるのです。これは意図していない動作ですよね。
+JavaScriptは実行時に変数の型を判別するため、このようなことが起こります。これは意図していない動作ですよね。
 
-では、これを防ぐにはどうしたらいいでしょうか。ここで登場するのが **TypeScript** です。
+これを防ぐにはどうしたらいいでしょうか。ここで登場するのが **TypeScript** です。
 
 ### TypeScriptの初歩
 
@@ -308,11 +308,11 @@ index.ts:5:26 - error TS2345: Argument of type 'string' is not assignable to par
 Found 1 error in index.ts:5
 ```
 
-きちんとエラーが出てくれました。これでバグを未然に防ぐことができましたね。
+きちんとエラーが検出されました。これでバグを未然に防ぐことができます。
 
 このように、プログラムが実行される際に、データ型に矛盾が生じないことを保証することを **型安全性** と呼びます。
 
-TypeScriptは **JavaScriptの型安全を高めた言語** といえるでしょう。
+TypeScriptは **JavaScriptに型安全性を追加した言語** といえるでしょう。
 
 ### 型定義の `type` と `interface`
 

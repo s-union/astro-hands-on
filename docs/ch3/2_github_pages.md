@@ -2,6 +2,9 @@
 
 さぁ、サイトが完成しました！では、ここからは実際にインターネット上にサイトをアップロードしてみましょう。
 
+> [!NOTE]
+> デプロイとは、開発したWebサイトやアプリケーションをインターネット上で公開することです。つまり、世界中の人がアクセスできるようにする作業のことです。
+
 デプロイする先にはレンタルサーバーや[Amazon S3](https://aws.amazon.com/jp/s3/)などのオブジェクトストレージ、[Cloudflare Pages](https://www.cloudflare.com/ja-jp/developer-platform/products/pages/)(イチオシ！)などの専用のホスティングサービスなど色々ありますが、ここではGitHubが提供しているGitHub Pagesを活用していこうと思います。
 
 GitHub Pagesでは、レポジトリからデプロイすると  `https://<あなたのGitHubのユーザー名>.github.io/<GitHubでのレポジトリ名>` が割り当てられます。例えば、このハンズオンでもGitHub Pagesが使われていますが、 https://s-union.github.io/astro-hands-on がトップページです。

@@ -25,6 +25,9 @@ $ pnpm run dev
 
 サーバーが起動し、 http://localhost:4321 に以下のようなページができれば成功です。
 
+> [!NOTE]
+> `localhost:4321`は「自分のパソコン上の4321番ポートで動いているサーバー」という意味です。開発中は、このURLでWebサイトを確認できます。
+
 ![](/docs/ch0/img/astro-init-screenshot.png)
 
 Astroへようこそ 🚀
@@ -103,7 +106,7 @@ $ git push
 
 ### (補足)VSCodeでgit操作
 
-gitのコマンドを覚えるの、大変ですよね。でも大丈夫！VSCodeにはgitを操作するツールがついています！
+gitのコマンドを覚えるのは大変ですが、VSCodeにはgitを操作するツールが付属しています。
 
 ![](/docs/ch0/img/vscode-git.png)
 
