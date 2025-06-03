@@ -152,3 +152,5 @@ Markdownには様々な仕様(方言)が存在していますが、[GitHub Flavo
 
 - [MDN Web DocsのMarkdownガイド](https://developer.mozilla.org/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)
 - [GitHubのMarkdownガイド](https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+[次のページへ](/docs/ch2/2_write_article.md)

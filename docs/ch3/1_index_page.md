@@ -264,3 +264,5 @@ const names = ['Tom', 'John', 'Mary']
 ![](/docs/ch3/img/index_page.png)
 
 長らくのコーディングお疲れ様でした！これでAstro部分は全て完成です！！
+
+[次のページへ](/docs/ch3/2_github_pages.md)

@@ -155,3 +155,5 @@ const entry: {
 </details>
 
 コミットログ: [f135d79](https://github.com/s-union/astro-hands-on/commit/f135d797393c9724800d9cd80d096ba5dfafaa4c)
+
+[次のページへ](/docs/ch2/4_blog_style.md)

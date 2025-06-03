@@ -65,6 +65,6 @@ $ git config --global user.email "<YOUR_EMAIL_HERE>"
 $ ssh -T git@github.com
 ```
 
-`Hi <GITHUB_NAME>! You've successfully authenticated, but GitHub does not provide shell access.` と帰ってきたら成功です！
+`Hi <GITHUB_NAME>! You've successfully authenticated, but GitHub does not provide shell access.` と返ってきたら成功です！
 
 [次のページへ](/docs/ch0/2_clone_and_push.md)

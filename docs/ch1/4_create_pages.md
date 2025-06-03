@@ -98,3 +98,5 @@ import Default from "../layouts/default.astro";
 実際のウェブサイトのようになってきましたね。
 
 次回はAstroのコンテンツ管理とMarkdownという記法について学んでいきましょう。
+
+[次のページへ](/docs/ch2/1_markdown.md)

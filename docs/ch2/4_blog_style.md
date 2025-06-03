@@ -182,7 +182,7 @@ const image = imageModules[`../../images/${entry.data.cover}`];
 
 コミットログ: [d3ce4d3](https://github.com/s-union/astro-hands-on/commit/d3ce4d3bb37c484b7db81cff1f0800c2ed877b48)
 
-ここまで来ればブログ記事部分の実装は完了です！お連れ様でした。
+ここまで来ればブログ記事部分の実装は完了です！お疲れ様でした。
 
 次回はトップページを完成させ、実際にページをデプロイしていきましょう！
 
