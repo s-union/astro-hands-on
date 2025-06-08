@@ -10,10 +10,10 @@
   },
   "dependencies": {
     "astro": "^5.7.12",
-    "sanitize.css": "^13.0.0"
+    "sanitize.css": "^13.0.0",
+    "sharp": "^0.34.2"
   },
   "devDependencies": {
-    "sharp": "^0.34.2",
     "typescript": "^5.8.3"
   },
   "packageManager": "pnpm@10.11.0"
