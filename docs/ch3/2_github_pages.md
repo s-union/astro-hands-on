@@ -64,7 +64,7 @@ GitHub Actionsはソフトウェア開発に用いられる自動化フローツ
 
 GitHub Actionsを使うには `.github/workflows` 以下に `.yml` ファイルを書くことで利用可能になります。
 
-`.github/workflows/deploy.yml` を以下のように書きます。
+`.github/workflows` というフォルダを作り、 `.github/workflows/deploy.yml` を以下のように書きます。
 
 ```yml
 name: Deploy to GitHub Pages
