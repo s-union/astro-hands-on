@@ -30,6 +30,9 @@ $ node -v
 >[!NOTE]
 > ここでの `$` はコマンド実行の先頭であることを表しています。この場合、あなたが入力するのは `node -v` だけです。
 
+> [!IMPORTANT]
+> もしもWindows環境で `npm` や `pnpm` のコマンドが実行できない場合、[Powershellの実行ポリシー](https://qiita.com/y__h/items/441595d005c3b6386caf)が原因かもしれません。
+
 導入に成功していれば、バージョンが表示されます。
 
 ![cmd](/docs/ch0/img/cmd.jpg)
